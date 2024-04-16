@@ -9,8 +9,26 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			//Write your code here 
 			
+			//checking if it does not contain non values
+		   if(arr.length <= 1){
+		     return -Infinity;
+		   }
+		   //sorting in descending order
+		   arr.sort(function(a,b){
+		     return b - a;
+		   });
+		   //iterate through the sorted Array
+		   for(let i=1; i<0; i++){
+		     
+		     if(arr[i] !== arr[0]){
+		       return arr[i];
+		     }
+		   }
+		   
+		   return -Infinity;
+		  
 		}
 
 		function Main() {
